@@ -1,5 +1,7 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.5)
 
 project(hello)
 
-add_executable(hello src/hello-world.c)
+add_executable(hello hello-world.c)
+
+install(TARGETS hello DESTINATION bin)
