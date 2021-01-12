@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(hello)
+set(VERSION 1.0.0)
 
-add_executable(hello hello-world.c)
+project(hello VERSION ${VERSION} LANGUAGES C)
 
-install(TARGETS hello DESTINATION bin)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+add_subdirectory(src)
